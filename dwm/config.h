@@ -55,7 +55,8 @@ static const Layout layouts[] = {
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
-static const char *clipboardcmd[] = { "/usr/local/bin/clipboard", NULL };
+static const char *paste_screen_shot_path[] = { "/usr/local/bin/clipboard", NULL };
+static const char *whisper[] = { "/mnt/Brain/3Code/OpenAI/Whisper/record/manage_recording.sh", NULL };
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
@@ -63,7 +64,8 @@ static const char *termcmd[]  = { "st", NULL };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_o,      spawn,          SHCMD("google-chrome-stable --password-store=basic") },
-	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = clipboardcmd } },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = paste_screen_shot_path } },
+	{ MODKEY|ShiftMask,             XK_r,      spawn,          {.v = whisper } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
