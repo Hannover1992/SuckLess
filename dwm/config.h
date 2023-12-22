@@ -56,7 +56,15 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 static const char *paste_screen_shot_path[] = { "/usr/local/bin/clipboard", NULL };
+/* Audio IN */
 static const char *whisper[] = { "/mnt/Brain/3Code/OpenAI/Whisper/record/manage_recording.sh", NULL };
+/* Audio Out */
+static const char *speech[]  = { "/mnt/Brain/3Code/OpenAI/TextToSpeech/run.sh", NULL };
+
+/* GPTS */
+static const char *grammer[] = { "/mnt/Brain/3Code/OpenAI/ChatGPT/manage_grammer.sh", NULL };
+static const char *letter[] = { "/mnt/Brain/3Code/OpenAI/ChatGPT/manage_letter.sh", NULL };
+
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
@@ -65,8 +73,11 @@ static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_o,      spawn,          SHCMD("google-chrome-stable --password-store=basic") },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = paste_screen_shot_path } },
-	{ MODKEY|ShiftMask,             XK_r,      spawn,          {.v = whisper } },
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = whisper } },
+	{ MODKEY,						XK_g,      spawn,          {.v = grammer } },
+	{ MODKEY|ShiftMask,				XK_l,      spawn,          {.v = letter } },
+	{ MODKEY|ShiftMask,				XK_a,      spawn,          {.v = speech } },
+	{ MODKEY,						XK_p,		spawn,			{.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
