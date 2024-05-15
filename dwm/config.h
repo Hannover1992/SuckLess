@@ -57,9 +57,11 @@ static const Layout layouts[] = {
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
+/* Screen Shot */
 static const char *paste_screen_shot_path[] = { "/usr/local/bin/clipboard", NULL };
+static const char  *scren_shot_open[] =  { "/usr/local/bin/openpicture", NULL }; 
 /* Audio IN */
-static const char *whisper[] = { "/mnt/Brain/3Code/OpenAI/Whisper/record/manage_recording.sh", NULL };
+static const char *whisper[] = { "/home/uczen/Programme/OpenAI/Whisper/record/manage_recording.sh", NULL };
 /* Audio Out */
 static const char *speech[]  = { "/mnt/Brain/3Code/OpenAI/TextToSpeech/run.sh", NULL };
 
@@ -75,6 +77,7 @@ static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_o,      spawn,          SHCMD("google-chrome-stable --password-store=basic") },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = paste_screen_shot_path } },
+	{ MODKEY|ShiftMask,             XK_o,      spawn,          {.v = scren_shot_open } },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = whisper } },
 	{ MODKEY,						XK_g,      spawn,          {.v = grammer } },
 	{ MODKEY|ShiftMask,				XK_l,      spawn,          {.v = letter } },
