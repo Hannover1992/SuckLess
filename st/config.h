@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 /* static char *font = "Liberation Mono:pixelsize=20:antialias=true:autohint=true"; */
-static char *font = "Liberation Mono:pixelsize=30:antialias=true:autohint=true";
+static char *font = "Liberation Mono:pixelsize=34:antialias=true:autohint=true";
 static int borderpx = 10;
 
 /*
@@ -94,46 +94,96 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
-/* Terminal colors (16 first used in escape sequence) */
+
+/*   ____      _            ____  _             _    */
+/*  / ___|___ | | ___  _ __/ ___|| |_ __ _ _ __| |_  */
+/* | |   / _ \| |/ _ \| '__\___ \| __/ _` | '__| __| */
+/* | |__| (_) | | (_) | |   ___) | || (_| | |  | |_  */
+/*  \____\___/|_|\___/|_|  |____/ \__\__,_|_|   \__| */
+                                                 
+
+
+/*      _            _     */
+/*   __| | __ _ _ __| | __ */
+/*  / _` |/ _` | '__| |/ / */
+/* | (_| | (_| | |  |   <  */
+/*  \__,_|\__,_|_|  |_|\_\ */
+                       
+
+
+/* static const char *colorname[] = { */
+/* 	"black", */
+/* 	"red3", */
+/* 	"green3", */
+/* 	"yellow3", */
+/* 	"blue2", */
+/* 	"magenta3", */
+/* 	"cyan3", */
+/* 	"gray90", */
+/* 	"gray50", */
+/* 	"red", */
+/* 	"green", */
+/* 	"yellow", */
+/* 	"#5c5cff", */
+/* 	"magenta", */
+/* 	"cyan", */
+/* 	"white", */
+/* 	[255] = 0, */
+/* 	"#cccccc", */
+/* 	"#555555", */
+/* 	"gray90",  */
+/* 	"black",   */
+/* }; */
+/* unsigned int defaultfg = 258; */
+/* unsigned int defaultbg = 259; */
+/* unsigned int defaultcs = 256; */
+/* static unsigned int defaultrcs = 257; */
+
+
+
+/*  _ _       _     _    */
+/* | (_) __ _| |__ | |_  */
+/* | | |/ _` | '_ \| __| */
+/* | | | (_| | | | | |_  */
+/* |_|_|\__, |_| |_|\__| */
+/*      |___/            */
+
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
-
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
-
+"#eee8d5",    
+"#dc322f",    
+"#859900",    
+"#b58900",    
+"#268bd2",    
+"#d33682",    
+"#2aa198",    
+"#073642",    
+"#fdf6e3",    
+"#cb4b16",    
+"#93a1a1",    
+"#839496",    
+"#657b83",    
+"#6c71c4",    
+"#586e75",    
+"#002b36",    
 	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
 	"#cccccc",
 	"#555555",
-	"gray90", /* default foreground colour */
-	"black", /* default background colour */
+	"gray90", 
+	"black", 
 };
+unsigned int defaultfg = 12;
+unsigned int defaultbg = 8;
+unsigned int defaultcs = 14;
+static unsigned int defaultrcs = 15;
 
 
-/*
- * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
- */
-unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
-unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+
+/*   ____      _            _____           _  */
+/*  / ___|___ | | ___  _ __| ____|_ __   __| | */
+/* | |   / _ \| |/ _ \| '__|  _| | '_ \ / _` | */
+/* | |__| (_) | | (_) | |  | |___| | | | (_| | */
+/*  \____\___/|_|\___/|_|  |_____|_| |_|\__,_| */
+                                           
 
 /*
  * Default shape of cursor
