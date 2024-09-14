@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-/* static char *font = "Liberation Mono:pixelsize=20:antialias=true:autohint=true"; */
-static char *font = "Liberation Mono:pixelsize=34:antialias=true:autohint=true";
+static char *font = "Liberation Mono:pixelsize=21:antialias=true:autohint=true";
+/* static char *font = "Liberation Mono:pixelsize=34:antialias=true:autohint=true"; */
 static int borderpx = 10;
 
 /*
@@ -111,33 +111,33 @@ unsigned int tabspaces = 8;
                        
 
 
-/* static const char *colorname[] = { */
-/* 	"black", */
-/* 	"red3", */
-/* 	"green3", */
-/* 	"yellow3", */
-/* 	"blue2", */
-/* 	"magenta3", */
-/* 	"cyan3", */
-/* 	"gray90", */
-/* 	"gray50", */
-/* 	"red", */
-/* 	"green", */
-/* 	"yellow", */
-/* 	"#5c5cff", */
-/* 	"magenta", */
-/* 	"cyan", */
-/* 	"white", */
-/* 	[255] = 0, */
-/* 	"#cccccc", */
-/* 	"#555555", */
-/* 	"gray90",  */
-/* 	"black",   */
-/* }; */
-/* unsigned int defaultfg = 258; */
-/* unsigned int defaultbg = 259; */
-/* unsigned int defaultcs = 256; */
-/* static unsigned int defaultrcs = 257; */
+static const char *colorname[] = {
+	"black",
+	"red3",
+	"green3",
+	"yellow3",
+	"blue2",
+	"magenta3",
+	"cyan3",
+	"gray90",
+	"gray50",
+	"red",
+	"green",
+	"yellow",
+	"#5c5cff",
+	"magenta",
+	"cyan",
+	"white",
+	[255] = 0,
+	"#cccccc",
+	"#555555",
+	"gray90", 
+	"black",  
+};
+unsigned int defaultfg = 258;
+unsigned int defaultbg = 259;
+unsigned int defaultcs = 256;
+static unsigned int defaultrcs = 257;
 
 
 
@@ -148,33 +148,33 @@ unsigned int tabspaces = 8;
 /* |_|_|\__, |_| |_|\__| */
 /*      |___/            */
 
-static const char *colorname[] = {
-"#eee8d5",    
-"#dc322f",    
-"#859900",    
-"#b58900",    
-"#268bd2",    
-"#d33682",    
-"#2aa198",    
-"#073642",    
-"#fdf6e3",    
-"#cb4b16",    
-"#93a1a1",    
-"#839496",    
-"#657b83",    
-"#6c71c4",    
-"#586e75",    
-"#002b36",    
-	[255] = 0,
-	"#cccccc",
-	"#555555",
-	"gray90", 
-	"black", 
-};
-unsigned int defaultfg = 12;
-unsigned int defaultbg = 8;
-unsigned int defaultcs = 14;
-static unsigned int defaultrcs = 15;
+/* static const char *colorname[] = { */
+/* "#eee8d5",     */
+/* "#dc322f",     */
+/* "#859900",     */
+/* "#b58900",     */
+/* "#268bd2",     */
+/* "#d33682",     */
+/* "#2aa198",     */
+/* "#073642",     */
+/* "#fdf6e3",     */
+/* "#cb4b16",     */
+/* "#93a1a1",     */
+/* "#839496",     */
+/* "#657b83",     */
+/* "#6c71c4",     */
+/* "#586e75",     */
+/* "#002b36",     */
+/* 	[255] = 0, */
+/* 	"#cccccc", */
+/* 	"#555555", */
+/* 	"gray90",  */
+/* 	"black",  */
+/* }; */
+/* unsigned int defaultfg = 12; */
+/* unsigned int defaultbg = 8; */
+/* unsigned int defaultcs = 14; */
+/* static unsigned int defaultrcs = 15; */
 
 
 
